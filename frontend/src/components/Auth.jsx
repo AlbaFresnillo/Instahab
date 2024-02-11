@@ -1,24 +1,18 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import HomePage from '../pages/HomePage'; 
+import { Navigate } from 'react-router-dom';
 
 const Auth = () => {
   const { user, logout } = useContext(AuthContext);
 
   return user ? (
-    <section>
-      Logged in as <Link to={`/user/${user.id}`}>{user.email}</Link>
-      <button onClick={() => logout()}>Logout</button>
-    </section>
+    <div>
+      <HomePage /> 
+    </div>
   ) : (
-    <ul>
-      <li>
-        <Link to={'/user'}>Signup</Link>
-      </li>
-      <li>
-        <Link to={'/login'}>Login</Link>
-      </li>
-    </ul>
+    <Navigate to="/login" replace={true} /> 
   );
 };
 

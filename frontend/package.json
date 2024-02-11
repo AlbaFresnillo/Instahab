@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "App.js",
+  "main": "App.jsx",
   "scripts": {
     "dev": "vite dev --open",
     "build": "vite build",
