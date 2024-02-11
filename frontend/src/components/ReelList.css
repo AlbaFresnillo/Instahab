@@ -1,0 +1,12 @@
+.reel-list {
+    font-family: 'inria sans';
+    width: 300px; 
+    margin: 0 auto; 
+    list-style: none; 
+    padding: 0; 
+  }
+  
+  .reel-list li {
+    margin-bottom: 20px; 
+  }
+  
