@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { getSingleReelService } from '../services';
+import { useEffect, useState } from "react";
+import { getSingleReelService } from "../services";
 
 const useReel = (id) => {
   const [reel, setReel] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const loadReel = async () => {

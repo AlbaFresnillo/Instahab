@@ -37,4 +37,3 @@ Tweets:
 - **GET /** Lista todos los reels
 - **GET /tweet/:id** Devuelve un reel
 - **DELETE /tweet/:id** Borra un reel solo si eres quien lo creó (necesita cabecera con token)
-

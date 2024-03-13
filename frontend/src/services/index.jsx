@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = "http://localhost:3000";
 
 export const getAllReelsService = async () => {
   const response = await fetch(`${BASE_URL}`);
@@ -69,9 +69,7 @@ export const getUserDataService = async (id) => {
 };
 
 export const getUserReelsService = async (id) => {
-  const response = await fetch(
-    `${BASE_URL}/user/${id}/reels`
-  );
+  const response = await fetch(`${BASE_URL}/user/${id}/reels`);
 
   const json = await response.json();
 
@@ -134,9 +132,9 @@ export const deleteReelService = async ({ id, token }) => {
 };
 export const likeReelService = async (reelId, userId, id, token) => {
   const response = await fetch(`${BASE_URL}/reels/${id}/like`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
       body: JSON.stringify({ userId }),
     },
@@ -148,5 +146,5 @@ export const likeReelService = async (reelId, userId, id, token) => {
     throw new Error(json.message);
   }
 
-  return json.data; 
+  return json.data;
 };

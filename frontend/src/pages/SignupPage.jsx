@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { signUpUserService } from "../services";
 import { Link, useNavigate } from "react-router-dom";
-import logo_hab_ from "../images/logo_hab_.png"
-import InstahabMobile from "../images/InstahabMobile.png"
+import logo_hab_ from "../images/logo_hab_.png";
+import InstahabMobile from "../images/InstahabMobile.png";
 import "./SignupPage.css";
 
 const SignupPage = () => {
@@ -35,17 +35,12 @@ const SignupPage = () => {
           alt="Instahab Screenshots"
           className="signupScreenshot"
         />
-        </div>
-        <div className="signupForm">
-        <img
-          src={logo_hab_}         
-          alt="Logo"
-          className="signupLogo"
-        />
+      </div>
+      <div className="signupForm">
+        <img src={logo_hab_} alt="Logo" className="signupLogo" />
         <form onSubmit={handleSignUp}>
           <fieldset>
             <div className="inputGroup">
-
               <input
                 type="email"
                 placeholder="Email"
@@ -65,16 +60,16 @@ const SignupPage = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <input
-              type="password"
-              placeholder="Confirm Password"
-              id="confirmPassword"
-              name="confirmPassword"
-              value={confirmPassword}
-              required
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-            <button className="signupButton">Sign Up</button>
-            {error && <p>{error}</p>}
+                type="password"
+                placeholder="Confirm Password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={confirmPassword}
+                required
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+              <button className="signupButton">Sign Up</button>
+              {error && <p>{error}</p>}
             </div>
           </fieldset>
         </form>

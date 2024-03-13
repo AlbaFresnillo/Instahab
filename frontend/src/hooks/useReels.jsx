@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { getAllReelsService, getUserReelsService } from '../services';
+import { useEffect, useState } from "react";
+import { getAllReelsService, getUserReelsService } from "../services";
 
 const useReels = (id) => {
   const [reels, setReels] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const loadReels = async () => {

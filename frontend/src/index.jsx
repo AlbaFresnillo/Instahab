@@ -8,9 +8,9 @@ const root = document.getElementById("root");
 
 const rootInstance = createRoot(root);
 rootInstance.render(
-    <AuthContextProviderComponent>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </AuthContextProviderComponent>
+  <AuthContextProviderComponent>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AuthContextProviderComponent>
 );

@@ -44,14 +44,14 @@ main.app {
   padding: 2rem;
 }
 
-main.app  section {
+main.app section {
   width: 100%;
   padding: 1rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-main.app  section.error {
+main.app section.error {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,11 +64,11 @@ main.app section.user-data {
   margin-bottom: 2rem;
 }
 
-main.app  section.error p {
+main.app section.error p {
   margin-bottom: 1rem;
 }
 
-main.app  section h1 {
+main.app section h1 {
   margin-bottom: 1rem;
 }
 

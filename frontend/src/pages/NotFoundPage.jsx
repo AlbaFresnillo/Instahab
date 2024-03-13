@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import {Link, useNavigate} from 'react-router-dom';
-//import './NotFoundPage.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const NotFoundPage = () => {
   const navigate = useNavigate();
@@ -12,15 +11,14 @@ const NotFoundPage = () => {
     <main className="localContainer">
       <div className="firstContent">
         <figure>
-          <img src="../images/animal.jpg" alt="Monster" className='img' />
+          <img src="../images/animal.jpg" alt="Monster" className="img" />
         </figure>
-       </div>
-       <div className="SeconContent">
-          <span className="NotFound">Page Not Found</span>
-          <h2>Oh No !! Error 404</h2>
-          <Link to="/login">Log in</Link>
-        </div>
-     
+      </div>
+      <div className="SeconContent">
+        <span className="NotFound">Page Not Found</span>
+        <h2>Oh No !! Error 404</h2>
+        <Link to="/login">Log in</Link>
+      </div>
     </main>
   );
 };

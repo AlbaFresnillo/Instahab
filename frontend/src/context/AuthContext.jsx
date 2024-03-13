@@ -1,18 +1,16 @@
-import { createContext, useEffect, useState } from 'react';
-import { getMyDataService } from '../services/index';
+import { createContext, useEffect, useState } from "react";
+import { getMyDataService } from "../services/index";
 
 export const AuthContext = createContext(null);
 
 export const AuthContextProviderComponent = ({ children }) => {
-  const [token, setToken] = useState(localStorage.getItem('token'));
+  const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState(null);
   const [likes, setLikes] = useState({});
   const [totalLikes, setTotalLikes] = useState(0);
 
-
-
   useEffect(() => {
-    localStorage.setItem('token', token);
+    localStorage.setItem("token", token);
   }, [token]);
 
   useEffect(() => {
@@ -23,7 +21,7 @@ export const AuthContextProviderComponent = ({ children }) => {
 
         setUser(data);
       } catch (error) {
-        setToken('');
+        setToken("");
         setUser(null);
       }
     };
@@ -46,38 +44,49 @@ export const AuthContextProviderComponent = ({ children }) => {
   }, [likes]);
 
   const logout = () => {
-    setToken('');
+    setToken("");
     setUser(null);
   };
 
   const login = (newToken) => {
     if (newToken !== token) {
-    setToken(newToken);
+      setToken(newToken);
     }
   };
 
   const toggleLike = (reelId) => {
-    setLikes(prevLikes => ({
+    setLikes((prevLikes) => ({
       ...prevLikes,
-      [reelId]: prevLikes[reelId] === 1 ? 0 : 1
+      [reelId]: prevLikes[reelId] === 1 ? 0 : 1,
     }));
   };
 
   const toggleDislike = (reelId) => {
-    setLikes(prevLikes => ({
+    setLikes((prevLikes) => ({
       ...prevLikes,
-      [reelId]: prevLikes[reelId] === -1 ? 0 : -1
+      [reelId]: prevLikes[reelId] === -1 ? 0 : -1,
     }));
   };
 
- const updateTotalLikes = (newTotalLikes) => {
-  setTotalLikes(newTotalLikes);
-};
-  
+  const updateTotalLikes = (newTotalLikes) => {
+    setTotalLikes(newTotalLikes);
+  };
+
   return (
-    <AuthContext.Provider value={{ token, user,likes,totalLikes,toggleDislike,toggleLike,updateTotalLikes, login, logout }}>
+    <AuthContext.Provider
+      value={{
+        token,
+        user,
+        likes,
+        totalLikes,
+        toggleDislike,
+        toggleLike,
+        updateTotalLikes,
+        login,
+        logout,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
 };
-

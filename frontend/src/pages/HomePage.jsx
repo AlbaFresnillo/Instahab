@@ -5,8 +5,7 @@ import ErrorMessage from "../components/ErrorMessage";
 import { AuthContext } from "../context/AuthContext";
 import Loading from "../components/Loading";
 import SearchBar from "../components/SearchBar";
-import { LikeComponent, TotalLikes } from "../components/LikeComponent";
-import logo_hab_ from "../images/logo_hab_.png"
+import logo_hab_ from "../images/logo_hab_.png";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -33,7 +32,7 @@ const HomePage = () => {
         <>
           <div className="left-column">
             <img
-            src={logo_hab_}
+              src={logo_hab_}
               alt="Instahab Logo"
               className="instahab-logo"
             />
@@ -45,7 +44,7 @@ const HomePage = () => {
                 alt="Avatar"
               />
             </Link>
-              <p className="totalLikes" >Likes: {totalLikes }</p>
+            <p className="totalLikes">Likes: {totalLikes}</p>
           </div>
 
           <div className="center-column">
