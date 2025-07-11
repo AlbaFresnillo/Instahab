@@ -1,0 +1,72 @@
+.loginContainer {
+  display: flex;
+  padding: 5% 10%;
+  border: none;
+}
+
+.authLeft {
+  margin-right: 2rem;
+}
+
+.loginScreenshot {
+  width: 35vw;
+  height: 70vh;
+  margin-top: 10px;
+}
+
+.loginForm {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.loginLogo {
+  width: 20vw;
+}
+fieldset{
+  border: none;
+}
+.inputGroup {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid lightgray;
+}
+
+.inputGroup input {
+  padding: 1vw;
+  margin: 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  width: 40vw;
+}
+
+.loginButton {
+  color: white;
+  margin-top: 0.5vw;
+  width: 42.3vw;
+  height: 5vh;
+  background-color: #2f80b4;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.signupLink {
+  text-align: center;
+  color: black;
+}
+
+a {
+  color: #2f80b4;
+  text-decoration: none;
+  font: 1em;
+}
+
+@media screen and (max-width: 1050px) {
+  .loginScreenshot {
+    display: none;
+  }
+} 
