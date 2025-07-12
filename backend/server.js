@@ -10,7 +10,6 @@ import {
   getMeController,
   loginController,
 } from './controllers/users.js';
-
 import {
   getReelsController,
   newReelController,
@@ -77,3 +76,4 @@ const { PORT } = process.env;
 app.listen(PORT, () => {
   console.log(`Servidor funcionando en http://localhost:${PORT} `);
 });
+

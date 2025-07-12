@@ -73,7 +73,7 @@ const Reel = ({ user, reel, removeReel, searchTerm }) => {
           {reel.image && (
             <img src={`${base_URL}/uploads/${reel.image}`} alt={reel.text} />
           )}
-          <p> {reel.text}</p>
+          <p>Comment: {reel.text}</p>
           <div className="nav">
             <Link to={`/reel/${reel.id}`}>
               Created at: {new Date(reel.created_at).toLocaleDateString()}
